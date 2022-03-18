@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+      
+    <div class="box" id="heading">
+        <h1><%= title %></h1>
+    </div>
+
+
+    <div class="box">
+
+    
+    
+            <% for(var i=0; i<items.length; i++) { %>
+                   
+                <form action="/delete" method="post">
+
+                    <div class=" item">
+                        <input type="checkbox" id="checkbox"  name = "checkbox" value="<%= items[i]._id %>"onChange = "this.form.submit()">
+                        <p ><%= items[i].name %></p>
+                        
+                    </div>
+                    
+                </form>
+           <% } %>
+            
+           <form action="/" method="post" class = "sec">
+               <div class="item">
+
+                   <input type="text" name = "newItem" placeholder="Type here" autocomplete="off">
+                   <button name="button" value= <%= page %> >+</button>
+                </div>
+        </form>
+           
+
+    </div>
+
+ 
+ 
+</body>
+</html>
