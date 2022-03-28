@@ -4,7 +4,7 @@ const app = express();
 const date = require(__dirname+"/date.js");
 app.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://kpsingh:vivaronaldo@cluster0.rtqf2.mongodb.net/todolist=?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://<Usename>:<password>@cluster0.rtqf2.mongodb.net/todolist=?retryWrites=true&w=majority');//Repalce username and password with your credentials;
 app.use(express.static("public"));
 
 app.set('view engine', 'ejs');
